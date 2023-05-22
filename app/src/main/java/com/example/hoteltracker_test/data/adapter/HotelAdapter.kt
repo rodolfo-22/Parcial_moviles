@@ -3,7 +3,7 @@ package com.example.hoteltracker_test.data.adapter
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.hoteltracker_test.data.model.HotelModel
-
+/*
 class HotelAdapter: RecyclerView.Adapter<HotelHolder> {
     private var listhotel: List<HotelModel>? = null
 
@@ -18,4 +18,4 @@ class HotelAdapter: RecyclerView.Adapter<HotelHolder> {
     override fun onBindViewHolder(holder: HotelHolder, position: Int) {
         TODO("Not yet implemented")
     }
-}
+}*/
