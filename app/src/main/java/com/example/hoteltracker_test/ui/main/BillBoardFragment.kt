@@ -8,29 +8,22 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.activity.OnBackPressedCallback
 import androidx.navigation.Navigation
-
-
-
+import androidx.navigation.findNavController
 import com.example.hoteltracker_test.R
-
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
+import com.example.hoteltracker_test.databinding.FragmentBillBoardBinding
 
 
-/**
- * A simple [Fragment] subclass.
- * Use the [BillBoardFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
+
+
 class BillBoardFragment : Fragment() {
 
-    private lateinit var binding : FragmentMainBinding
+    private lateinit var binding : FragmentBillBoardBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentMainBinding.inflate(inflater, container, false)
+        binding = FragmentBillBoardBinding.inflate(inflater, container, false)
         return binding.root
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -44,8 +37,12 @@ class BillBoardFragment : Fragment() {
         listener()
     }
     private fun listener(){
-        binding.setOnClickLi
+        binding.btnToForm.setOnClickListener{
+            it.findNavController().navigate(R.id.action_billBoardFragment_to_formFragment)
+        }
     }
+
+
     //para retroceder
     private fun onBackPressed(){
         val navController = Navigation.findNavController(requireView())
